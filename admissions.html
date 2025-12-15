@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Admissions - Learners Academy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+
+    <div class="bg-dark text-white py-1 small">
+        <div class="container d-flex justify-content-between">
+            <div><i class="fas fa-phone-alt me-2"></i> 0242-123456 | <i class="fas fa-envelope me-2"></i> info@learnersacademy.ac.pk</div>
+            <div>Naushahro Feroz, Sindh</div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+              <a class="navbar-brand" href="index.html">
+                <img src="Images/logo/logo.webp" alt="Learners Academy Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="programs.html">Programs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faculty.html">Faculty</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="admissions.html" class="btn btn-secondary-custom ms-3 active">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container section-padding">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-lg border-0">
+                    <div class="card-header bg-primary text-white text-center p-4">
+                        <h2 class="fw-bold text-white">Online Admission Form</h2>
+                        <p class="mb-0">Secure your spot for Session 2024-2025</p>
+                    </div>
+                    <div class="card-body p-5">
+                        <form class="needs-validation" novalidate>
+                            
+                            <h4 class="text-primary border-bottom pb-2 mb-4"><i class="fas fa-user-graduate me-2"></i> Student Information</h4>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name (As per CNIC/B-Form)</label>
+                                    <input type="text" class="form-control" placeholder="e.g., Muhammad Ali Khan" required>
+                                    <div class="invalid-feedback">Please enter student's full name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" required>
+                                    <div class="invalid-feedback">Please enter Date of Birth.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Gender</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Gender...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select gender.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Student Contact Number</label>
+                                    <input type="tel" class="form-control" placeholder="03xxxxxxxxx" pattern="[0-9]{11}" required>
+                                    <div class="invalid-feedback">Please enter a valid 11-digit mobile number.</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Residential Address</label>
+                                    <textarea class="form-control" rows="2" required></textarea>
+                                    <div class="invalid-feedback">Please enter full address.</div>
+                                </div>
+                            </div>
+
+                            <h4 class="text-primary border-bottom pb-2 mt-5 mb-4"><i class="fas fa-users me-2"></i> Parent/Guardian Information</h4>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label">Father's Name</label>
+                                    <input type="text" class="form-control" required>
+                                    <div class="invalid-feedback">Please enter Father's name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Father's Contact Number</label>
+                                    <input type="tel" class="form-control" placeholder="03xxxxxxxxx" pattern="[0-9]{11}" required>
+                                    <div class="invalid-feedback">Please enter Father's 11-digit mobile number.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Father's CNIC</label>
+                                    <input type="text" class="form-control" placeholder="xxxxx-xxxxxxx-x" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" required>
+                                    <div class="invalid-feedback">Please enter CNIC in xxxxx-xxxxxxx-x format.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address (Optional)</label>
+                                    <input type="email" class="form-control" placeholder="e.g., example@domain.com">
+                                </div>
+                            </div>
+                            
+                            <h4 class="text-primary border-bottom pb-2 mt-5 mb-4"><i class="fas fa-book-open me-2"></i> Academic Details</h4>
+                            <div class="row g-3">
+                                <div class="col-md-12">
+                                    <label class="form-label">Select Desired Program</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Course...</option>
+                                        <option>MDCAT Preparation (Medical)</option>
+                                        <option>ECAT Preparation (Engineering)</option>
+                                        <option>F.Sc Part-I (Pre-Medical)</option>
+                                        <option>F.Sc Part-I (Pre-Engineering)</option>
+                                        <option>Class 10 (Science Group)</option>
+                                        <option>Class 9 (Science Group)</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a program.</div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Previous Institute (School/College Name)</label>
+                                    <input type="text" class="form-control" placeholder="Last attended institute" required>
+                                    <div class="invalid-feedback">Please enter previous institute name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Last Exam Marks Obtained</label>
+                                    <input type="number" class="form-control" required min="1" max="1100">
+                                    <div class="invalid-feedback">Please enter valid marks obtained.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Total Marks of Last Exam</label>
+                                    <input type="number" class="form-control" required min="100" max="1100">
+                                    <div class="invalid-feedback">Please enter valid total marks.</div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-check mt-4">
+                                <input class="form-check-input" type="checkbox" value="" id="declarationCheck" required>
+                                <label class="form-check-label" for="declarationCheck">
+                                    I declare that all the information provided above is true and correct to the best of my knowledge.
+                                </label>
+                                <div class="invalid-feedback">You must agree to the declaration before submitting.</div>
+                            </div>
+
+                            <div class="d-grid gap-2 mt-5">
+                                <button type="submit" class="btn btn-secondary-custom btn-lg"><i class="fas fa-paper-plane me-2"></i> Submit Application</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+  <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold">Learners Academy</h5>
+                    <p>The leading coaching institute committed to providing quality education and shaping the future of students in Pakistan.</p>
+                </div>
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <a href="about.html">About Us</a>
+                    <a href="programs.html">Programs</a>
+                    <a href="news.html">News & Updates</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Programs</h5>
+                    <a href="#">MDCAT / ECAT</a>
+                    <a href="#">F.Sc Pre-Medical</a>
+                    <a href="#">F.Sc Pre-Engineering</a>
+                    <a href="#">Matriculation</a>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Behind Lal Qila Restaurant main Auto Bhan Road Hyderabad Sindh</p>
+                    <p><i class="fas fa-phone me-2"></i> 0242-123456</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@learnersacademy.ac.pk</p>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <div class="text-center small">
+                &copy; 2025 Learners Academy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+
+    <a href="https://wa.me/923001234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="chat-btn" id="chatBtn"><i class="fas fa-comments me-2"></i> Chat with Us</button>
+    <div class="chat-box" id="chatBox">
+        <div class="chat-header">
+            <span>Support Assistant</span>
+            <button type="button" class="btn-close btn-close-white" id="closeChat"></button>
+        </div>
+        <div class="chat-body" id="chatContent">
+            <div class="bot-msg">Hello! Welcome to Learners Academy. How can I assist you today?</div>
+            <div class="chat-options mt-3">
+                <button onclick="sendOption('Fee Structure')">Fee Structure</button>
+                <button onclick="sendOption('Admission Process')">Admission Process</button>
+                <button onclick="sendOption('Timings')">Class Timings</button>
+                <button onclick="sendOption('Contact Number')">Contact Number</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="JavaScript/script.js"></script>
+</body>
+</html>

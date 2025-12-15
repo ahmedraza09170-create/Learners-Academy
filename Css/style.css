@@ -1,0 +1,443 @@
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* --- CSS Variables (Theme Configuration) --- */
+:root {
+    --primary-color: #002147; /* Deep Academic Blue (KIPS style) */
+    --secondary-color: #fd7e14; /* Vibrant Orange for Call to Actions */
+    --accent-color: #f8f9fa; /* Light Gray for backgrounds */
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* --- Navigation --- */
+.navbar {
+    background-color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color) !important;
+}
+
+.nav-link {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+.btn-primary-custom {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    transition: var(--transition);
+}
+
+.btn-primary-custom:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+.navbar-brand .navbar-logo {
+    /* Logo image ki max height set karein */
+    height: 40px; /* Adjust this value as needed */
+    width: auto;
+    margin-right: 8px; /* Text se thoda space de */
+}
+.btn-secondary-custom {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: none;
+    transition: var(--transition);
+}
+
+.btn-secondary-custom:hover {
+    background-color: #e36a0d;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(rgba(0, 33, 71, 0.8), rgba(0, 33, 71, 0.8)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* --- HERO SECTION CHANGES --- */
+
+.hero-section {
+    /* 1. Background Image Set Karen (path change kar sakte hain) */
+    background: url('Images/hero-bg.jpg') no-repeat center center/cover; 
+    position: relative;
+    /* Hero section ki height set karein */
+    height: 450px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* Ensure text is white */
+}
+
+.hero-overlay {
+    /* 2. Light Transparent Blue/Dark Overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Yeh value adjust karein: rgba(R, G, B, Opacity) */
+    /* Dark Blue (0, 51, 102) with 70% opacity */
+    background-color: rgba(0, 51, 102, 0.7); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Overlay ko text ke neeche rakhen */
+}
+
+/* Ensure text content is above the overlay */
+.hero-overlay .container {
+    z-index: 2;
+    position: relative; 
+}
+
+
+/* --- SUCCESS STORIES SECTION STYLES (Optional) --- */
+/* Agar aap chahte hain ki success boxes achhe dikhein */
+.topper-box {
+    background-color: #f8f9fa; /* Light gray background */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topper-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* NOTE: 'theme-primary' class ko bhi define karna padega agar woh defined nahi hai,
+   for example: */
+/* .theme-primary {
+    color: #007bff !important; // Aapki primary theme color yahan aayegi
+} */
+
+/* --- Cards (Programs, Faculty) --- */
+.card-custom {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    overflow: hidden;
+    height: 100%;
+}
+
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.section-title h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--secondary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+footer h5 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--secondary-color);
+    padding-left: 5px;
+}
+
+/* --- Floating Buttons --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    left: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.whatsapp-float:hover {
+    background-color: #1ebc57;
+    color: white;
+}
+
+/* Chatbot */
+.chat-btn {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 1000;
+    font-weight: 600;
+}
+
+.chat-box {
+    position: fixed;
+    bottom: 100px;
+    right: 40px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+    display: none; /* Hidden by default */
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.chat-header {
+    background: var(--primary-color);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-body {
+    padding: 15px;
+    height: 300px;
+    overflow-y: auto;
+    background: #f9f9f9;
+}
+
+.chat-options button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.chat-options button:hover {
+    background: #f1f1f1;
+}
+
+.bot-msg, .user-msg {
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    max-width: 80%;
+}
+.chat-box.active {
+    display: flex; /* 'display: flex' is good because your chat-header/body uses it */
+    flex-direction: column; 
+}
+.bot-msg {
+    background: #e9ecef;
+    color: #333;
+}
+
+.user-msg {
+    background: var(--primary-color);
+    color: white;
+    margin-left: auto;
+}
+/* --- Gallery Specific Styles --- */
+
+.gallery-img {
+    cursor: pointer;
+    /* This makes all images a uniform size for better layout consistency. Adjust as needed. */
+    height: 150px; 
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theme-primary {
+    /* Assuming primary color is used for headings */
+    color: var(--bs-primary) !important; /* Ensures it matches the Bootstrap primary variable */
+}
+
+/* Keyframes for subtle image float (if you want to use it elsewhere) */
+/* (Note: floatIn keyframes were not used in the provided HTML but are included for completeness) */
+@keyframes floatImg {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    100% {
+        transform: translateY(-8px) scale(1.05);
+    }
+}
+#galleryModal .modal-content {
+    /* Main Content Area: Dark Blue Color */
+    background-color: #003366 !important; 
+    height: 600px;
+    
+    
+    /* Yellow Border Style (Aapki image mein dikh raha hai) */
+    border: 5px solid #ffc107; /* Bootstrap yellow (warning) color */
+    
+    border-radius: 8px; /* Slightly rounded corners */
+}
+
+/* 2. Modal Header (Top part jahan close button hota hai) */
+#galleryModal .modal-header {
+    border-bottom: 1px solid #ffc107; /* Yellow separator */
+    padding: 10px 15px;
+}
+
+/* 3. Modal Body (Jahan image display honi chahiye) */
+#galleryModal .modal-body {
+    background-color: #003366; 
+    padding: 0.5rem; /* Padding kam kiya */
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    /* Blue background box ki minimum height ko 500px se kam karke 350px kar diya */
+    min-height: 100px; 
+}
+
+/* 4. Image Display (Ensuring the image fits inside the custom box) */
+#galleryModal #modal-img {
+    max-height: 80vh; /* Image height ko viewport ke hisaab se limit kiya */
+    width: auto; 
+    max-width: 100%; /* Image choti na ho jaye */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Halka white border */
+    border-radius: 5px;
+}
+
+/* 5. Modal Footer (Previous/Next buttons) */
+#galleryModal .modal-footer {
+    border-top: 1px solid #ffc107; /* Yellow separator */
+    background-color: rgba(0, 0, 0, 0.2); /* Thoda dark shade footer mein */
+}
+
+/* Custom CSS for the "Gallery" text (Aapki image mein dikh raha tha, jo hum image se replace kar rahe hain, lekin agar aapko title chahiye to) */
+/* Agar aap Gallery likha hua dekhna chahte hain modal ke andar, to aapko ye CSS use karna hoga. */
+/* Lekin agar aap chahte hain ki sirf image dikhe, to ye ignore kar sakte hain. */
+/* Agar aapko image ke upar "Gallery" likha dikhana hai, toh aapko JS/HTML edit karna padega. */
+
+/* Navigation Buttons Styles */
+#galleryModal .btn-light {
+    color: #003366;
+    background-color: #ffc107;
+    border-color: #ffc107;
+    font-weight: bold;
+}
+#galleryModal .btn-light:hover {
+    background-color: #e0a800;
+    border-color: #e0a800;
+}#galleryModal #modal-img {
+    max-height: 80vh; /* Image ki maximum height viewport ki 80% hogi */
+    /* ...baki properties */
+}
